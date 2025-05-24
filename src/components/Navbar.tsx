@@ -36,24 +36,24 @@ const Navbar = () => {
 
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${
-      isScrolled ? 'glass py-3' : 'bg-transparent py-5'
+      isScrolled ? 'glass py-2' : 'bg-transparent py-4'
     }`}>
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="flex items-center justify-between">
           <button
             onClick={scrollToTop}
-            className="text-3xl md:text-4xl font-bold gradient-text hover:scale-110 transition-all duration-300 tracking-tight"
+            className="text-2xl md:text-3xl font-bold text-white hover:text-cyan-400 transition-colors duration-300"
           >
             Kabiraj
           </button>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-10">
+          <div className="hidden md:flex space-x-6">
             {navItems.map((item) => (
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="text-lg text-gray-300 hover:text-cyan-400 transition-all duration-300 relative group font-medium tracking-wide"
+                className="text-sm text-gray-300 hover:text-cyan-400 transition-all duration-300 relative group font-medium"
               >
                 {item.name}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 transition-all duration-300 group-hover:w-full"></span>
@@ -64,9 +64,9 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-white hover:text-cyan-400 transition-all duration-300 transform hover:scale-110"
+            className="md:hidden text-white hover:text-cyan-400 transition-all duration-300"
           >
-            {isOpen ? <X size={28} /> : <Menu size={28} />}
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
 
@@ -74,12 +74,12 @@ const Navbar = () => {
         <div className={`md:hidden transition-all duration-500 ${
           isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
         } overflow-hidden`}>
-          <div className="py-6 space-y-6">
+          <div className="py-4 space-y-4">
             {navItems.map((item) => (
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="block w-full text-left text-lg text-gray-300 hover:text-cyan-400 transition-all duration-300 py-2 font-medium"
+                className="block w-full text-left text-sm text-gray-300 hover:text-cyan-400 transition-all duration-300 py-2 font-medium"
               >
                 {item.name}
               </button>
