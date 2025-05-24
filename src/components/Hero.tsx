@@ -22,7 +22,13 @@ const Hero = () => {
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Background particles effect */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-black">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.02"%3E%3Ccircle cx="30" cy="30" r="1"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
+        <div className="absolute inset-0 opacity-20">
+          {/* Simple dot pattern background */}
+          <div className="absolute inset-0" style={{
+            backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px)',
+            backgroundSize: '50px 50px'
+          }}></div>
+        </div>
       </div>
 
       <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
@@ -31,7 +37,7 @@ const Hero = () => {
             Hi, I'm <span className="gradient-text">Alex</span>
           </h1>
           <h2 className="text-2xl md:text-4xl mb-8 h-16 flex items-center justify-center">
-            <span className="border-r-2 border-neon-blue animate-blink pr-2">
+            <span className="border-r-2 border-cyan-400 animate-pulse pr-2">
               {text}
             </span>
           </h2>
@@ -41,27 +47,27 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <button className="bg-gradient-to-r from-neon-blue to-neon-purple px-8 py-4 rounded-lg text-lg font-semibold hover:scale-105 transition-all duration-300 animate-glow">
+            <button className="bg-gradient-to-r from-cyan-500 to-purple-600 px-8 py-4 rounded-lg text-lg font-semibold hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-cyan-500/25">
               Hire Me Now
             </button>
-            <button className="glass px-8 py-4 rounded-lg text-lg font-semibold hover:scale-105 transition-all duration-300 neon-border">
+            <button className="glass px-8 py-4 rounded-lg text-lg font-semibold hover:scale-105 transition-all duration-300 border border-cyan-400/30 hover:border-cyan-400/60">
               View My Work
             </button>
           </div>
         </div>
 
         {/* Floating icons */}
-        <div className="absolute top-20 left-10 animate-float">
-          <div className="w-16 h-16 bg-gradient-to-r from-neon-blue to-neon-purple rounded-lg opacity-20"></div>
+        <div className="absolute top-20 left-10 animate-bounce" style={{ animationDuration: '3s' }}>
+          <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg opacity-20"></div>
         </div>
-        <div className="absolute bottom-20 right-10 animate-float" style={{ animationDelay: '1s' }}>
-          <div className="w-12 h-12 bg-gradient-to-r from-neon-purple to-neon-pink rounded-full opacity-20"></div>
+        <div className="absolute bottom-20 right-10 animate-bounce" style={{ animationDelay: '1s', animationDuration: '3s' }}>
+          <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-pink-500 rounded-full opacity-20"></div>
         </div>
       </div>
 
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <ArrowDown className="text-neon-blue" size={32} />
+        <ArrowDown className="text-cyan-400" size={32} />
       </div>
     </section>
   );
