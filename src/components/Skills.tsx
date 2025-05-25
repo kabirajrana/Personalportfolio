@@ -60,17 +60,17 @@ const Skills = () => {
           {/* Tech Stack Icons */}
           <div className={`${isVisible ? 'animate-slide-in-left' : 'opacity-0'}`}>
             <h3 className="text-2xl font-bold text-neon-blue mb-8">Tech Stack</h3>
-            <div className="grid grid-cols-4 gap-6">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-6">
               {techStack.map((tech, index) => (
                 <div
                   key={tech.name}
-                  className="glass p-6 rounded-xl text-center hover:scale-110 transition-all duration-300 cursor-pointer group"
+                  className="bg-gradient-to-br from-gray-800/60 to-gray-900/60 backdrop-blur-sm border border-gray-700/50 p-3 sm:p-6 rounded-xl text-center hover:scale-110 hover:border-cyan-400/50 transition-all duration-300 cursor-pointer group shadow-lg hover:shadow-cyan-500/20"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
-                  <div className="text-4xl mb-3 group-hover:scale-125 transition-transform duration-300">
+                  <div className="text-2xl sm:text-4xl mb-2 sm:mb-3 group-hover:scale-125 transition-transform duration-300">
                     {tech.icon}
                   </div>
-                  <div className="text-sm text-gray-300">{tech.name}</div>
+                  <div className="text-xs sm:text-sm text-gray-300 font-medium">{tech.name}</div>
                 </div>
               ))}
             </div>

@@ -73,9 +73,9 @@ const Services = () => {
                 ))}
               </ul>
               
-              <div className="flex items-center justify-between">
+              <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
                 <span className="text-2xl font-bold gradient-text">{service.price}</span>
-                <button className="px-6 py-2 bg-gradient-to-r from-neon-blue to-neon-purple rounded-lg hover:scale-105 transition-transform font-medium">
+                <button className="px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-neon-blue to-neon-purple rounded-lg hover:scale-105 transition-all duration-300 font-medium text-sm sm:text-base shadow-lg hover:shadow-cyan-500/20 w-full sm:w-auto">
                   Get Quote
                 </button>
               </div>
@@ -90,7 +90,7 @@ const Services = () => {
               Every project is unique. Let's discuss your specific requirements and 
               I'll provide a tailored solution that fits your budget and timeline.
             </p>
-            <button className="bg-gradient-to-r from-neon-purple to-neon-pink px-8 py-4 rounded-lg text-lg font-semibold hover:scale-105 transition-all duration-300">
+            <button className="bg-gradient-to-r from-neon-purple to-neon-pink px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-purple-500/20">
               Schedule Free Consultation
             </button>
           </div>

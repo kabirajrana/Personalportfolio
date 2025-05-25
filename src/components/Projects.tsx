@@ -70,19 +70,19 @@ const Projects = () => {
             A showcase of my recent work and personal projects
           </p>
 
-          {/* Filter buttons */}
-          <div className="flex justify-center space-x-4 mb-12">
+          {/* Filter buttons - Mobile responsive */}
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-12 px-2">
             {categories.map((category) => (
               <button
                 key={category}
                 onClick={() => setFilter(category)}
-                className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
+                className={`px-3 sm:px-6 py-2 sm:py-3 rounded-lg font-medium transition-all duration-300 text-sm sm:text-base flex-1 sm:flex-none min-w-0 ${
                   filter === category
-                    ? 'bg-gradient-to-r from-neon-blue to-neon-purple text-white'
-                    : 'glass hover:neon-border text-gray-300'
+                    ? 'bg-gradient-to-r from-neon-blue to-neon-purple text-white shadow-lg'
+                    : 'glass hover:neon-border text-gray-300 hover:text-white'
                 }`}
               >
-                {category.charAt(0).toUpperCase() + category.slice(1)}
+                <span className="truncate">{category.charAt(0).toUpperCase() + category.slice(1)}</span>
               </button>
             ))}
           </div>
