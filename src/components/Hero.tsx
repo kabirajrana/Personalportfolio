@@ -77,7 +77,7 @@ const Hero = () => {
                     onClick={handlePhotoClick}
                   >
                     <img 
-                      src="/lovable-uploads/b7a0c4e5-0a5b-40b8-8a4b-c9e4d8a76543.png"
+                      src="/lovable-uploads/4a36839f-6742-479f-afd7-e731b2779932.png"
                       alt="Kabiraj - Full Stack Developer"
                       className={`w-full h-full object-cover transition-transform duration-700 ${
                         isPhotoClicked ? 'scale-110' : 'scale-100'
@@ -109,19 +109,20 @@ const Hero = () => {
               </div>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 lg:gap-6 justify-center lg:justify-start items-center">
-              <button className="group relative bg-gradient-to-r from-cyan-500 to-purple-600 px-4 sm:px-5 lg:px-8 py-2 sm:py-2.5 lg:py-4 rounded-lg text-sm sm:text-sm lg:text-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 active:scale-95 w-full sm:w-auto max-w-[140px] sm:max-w-none">
+            {/* Updated mobile buttons with better alignment */}
+            <div className="flex flex-row gap-3 justify-center lg:justify-start items-center">
+              <button className="group relative bg-gradient-to-r from-cyan-500 to-purple-600 px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 active:scale-95 flex-1 sm:flex-initial sm:px-6 sm:py-3 sm:text-base lg:px-8 lg:py-4 lg:text-lg max-w-[140px] sm:max-w-none">
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg blur opacity-30 group-hover:opacity-70 transition-opacity duration-300"></div>
                 <span className="relative text-white">Hire Me Now</span>
               </button>
               <button
                 onClick={handleDownloadCV}
-                className="group relative overflow-hidden bg-transparent border-2 border-cyan-400 px-4 sm:px-5 lg:px-8 py-2 sm:py-2.5 lg:py-4 rounded-lg text-sm sm:text-sm lg:text-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-cyan-400/30 active:scale-95 w-full sm:w-auto max-w-[140px] sm:max-w-none"
+                className="group relative overflow-hidden bg-transparent border-2 border-cyan-400 px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-cyan-400/30 active:scale-95 flex-1 sm:flex-initial sm:px-6 sm:py-3 sm:text-base lg:px-8 lg:py-4 lg:text-lg max-w-[140px] sm:max-w-none"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500"></div>
                 <span className="relative flex items-center justify-center gap-1 sm:gap-2 text-white group-hover:text-cyan-100 transition-colors">
                   <Download size={14} className="group-hover:animate-bounce" />
-                  Download CV
+                  <span className="hidden xs:inline">Download</span> CV
                 </span>
               </button>
             </div>
@@ -141,7 +142,7 @@ const Hero = () => {
                 onClick={handlePhotoClick}
               >
                 <img 
-                  src="/lovable-uploads/b7a0c4e5-0a5b-40b8-8a4b-c9e4d8a76543.png"
+                  src="/lovable-uploads/4a36839f-6742-479f-afd7-e731b2779932.png"
                   alt="Kabiraj - Full Stack Developer"
                   className={`w-full h-full object-cover transition-transform duration-700 ${
                     isPhotoClicked ? 'scale-110' : 'scale-100'
@@ -182,9 +183,12 @@ const Hero = () => {
         <div className="w-6 h-6 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-gradient-to-r from-purple-600 to-pink-500 rounded-full opacity-20"></div>
       </div>
 
-      {/* Scroll indicator */}
+      {/* Enhanced scroll indicator with better visibility */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <ArrowDown className="text-cyan-400" size={24} />
+        <div className="relative">
+          <div className="absolute inset-0 bg-cyan-400 rounded-full blur-md opacity-60"></div>
+          <ArrowDown className="relative text-cyan-400 bg-black/50 backdrop-blur-sm rounded-full p-2 border-2 border-cyan-400/50" size={40} />
+        </div>
       </div>
     </section>
   );
