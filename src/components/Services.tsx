@@ -9,28 +9,28 @@ const Services = () => {
       title: 'Web Development',
       description: 'Custom web applications built with modern frameworks and best practices',
       features: ['React/Next.js', 'TypeScript', 'Responsive Design', 'Performance Optimization'],
-      price: 'Starting at $2,500'
+      price: 'Starting at $500'
     },
     {
       icon: <Smartphone className="w-8 h-8" />,
       title: 'Mobile Development',
       description: 'Cross-platform mobile apps that work seamlessly on iOS and Android',
       features: ['React Native', 'Flutter', 'Native Performance', 'App Store Deployment'],
-      price: 'Starting at $3,500'
+      price: 'Starting at $800'
     },
     {
       icon: <Server className="w-8 h-8" />,
       title: 'Backend Development',
       description: 'Scalable APIs and server infrastructure for your applications',
       features: ['Node.js/Python', 'Database Design', 'Cloud Deployment', 'API Integration'],
-      price: 'Starting at $2,000'
+      price: 'Starting at $700'
     },
     {
       icon: <Palette className="w-8 h-8" />,
       title: 'UI/UX Design',
       description: 'Beautiful and intuitive user interfaces that convert visitors to customers',
       features: ['User Research', 'Wireframing', 'Prototyping', 'Design Systems'],
-      price: 'Starting at $1,500'
+      price: 'Starting at $400'
     }
   ];
 

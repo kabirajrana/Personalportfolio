@@ -11,7 +11,7 @@ const Footer = () => {
     { icon: <Twitter className="w-5 h-5" />, href: 'https://twitter.com', label: 'Twitter' },
     { icon: <Github className="w-5 h-5" />, href: 'https://github.com', label: 'GitHub' },
     { icon: <Linkedin className="w-5 h-5" />, href: 'https://linkedin.com', label: 'LinkedIn' },
-    { icon: <Mail className="w-5 h-5" />, href: 'mailto:kabiraj@example.com', label: 'Email' }
+    { icon: <Mail className="w-5 h-5" />, href: 'mailto:Mail@digitalkabiraj.com', label: 'Email' }
   ];
 
   const quickLinks = [
@@ -73,9 +73,9 @@ const Footer = () => {
           <div className="space-y-4 text-center md:text-left">
             <h4 className="text-lg font-semibold text-white">Get In Touch</h4>
             <div className="space-y-2 text-gray-400 text-sm md:text-base">
-              <p>kabiraj@example.com</p>
-              <p>+1 (555) 123-4567</p>
-              <p>Available Worldwide</p>
+              <p>Mail@digitalkabiraj.com</p>
+              <p>+9779866866055</p>
+              <p>Kathmandu, Nepal</p>
             </div>
             <div className="glass p-3 md:p-4 rounded-lg">
               <p className="text-xs md:text-sm text-gray-300">
