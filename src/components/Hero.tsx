@@ -122,7 +122,7 @@ const Hero = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500"></div>
                 <span className="relative flex items-center justify-center gap-1 sm:gap-2 text-white group-hover:text-cyan-100 transition-colors">
                   <Download size={14} className="group-hover:animate-bounce" />
-                  <span className="hidden xs:inline">Download</span> CV
+                  Download CV
                 </span>
               </button>
             </div>
@@ -183,12 +183,9 @@ const Hero = () => {
         <div className="w-6 h-6 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-gradient-to-r from-purple-600 to-pink-500 rounded-full opacity-20"></div>
       </div>
 
-      {/* Enhanced scroll indicator with better visibility */}
+      {/* Simplified animated down arrow */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="relative">
-          <div className="absolute inset-0 bg-cyan-400 rounded-full blur-md opacity-60"></div>
-          <ArrowDown className="relative text-cyan-400 bg-black/50 backdrop-blur-sm rounded-full p-2 border-2 border-cyan-400/50" size={40} />
-        </div>
+        <ArrowDown className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300" size={32} />
       </div>
     </section>
   );
