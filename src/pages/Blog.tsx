@@ -54,9 +54,9 @@ const Blog = () => {
       {/* Search and Filter Section */}
       <section className="px-4 sm:px-6 md:px-12 lg:px-24 mb-12">
         <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col lg:flex-row gap-6 items-start lg:items-center justify-between">
+          <div className="flex flex-col xl:flex-row gap-6 items-start xl:items-center">
             {/* Search Bar */}
-            <div className="relative w-full lg:w-96">
+            <div className="relative w-full xl:w-96 xl:flex-shrink-0">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
               <input
                 type="text"
@@ -68,20 +68,25 @@ const Blog = () => {
             </div>
 
             {/* Category Filter */}
-            <div className="flex flex-wrap gap-2">
-              {categories.map((category) => (
-                <button
-                  key={category}
-                  onClick={() => setSelectedCategory(category)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                    selectedCategory === category
-                      ? 'bg-gradient-to-r from-cyan-400 to-purple-500 text-white'
-                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 hover:text-white'
-                  }`}
-                >
-                  {category}
-                </button>
-              ))}
+            <div className="w-full xl:flex-1">
+              <div className="flex flex-wrap items-center gap-3 justify-start xl:justify-end">
+                <span className="text-sm text-gray-400 font-medium hidden lg:block mr-2">Categories:</span>
+                <div className="flex flex-wrap gap-2">
+                  {categories.map((category) => (
+                    <button
+                      key={category}
+                      onClick={() => setSelectedCategory(category)}
+                      className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 whitespace-nowrap ${
+                        selectedCategory === category
+                          ? 'bg-gradient-to-r from-cyan-400 to-purple-500 text-white shadow-lg'
+                          : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 hover:text-white border border-gray-700 hover:border-gray-600'
+                      }`}
+                    >
+                      {category}
+                    </button>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
