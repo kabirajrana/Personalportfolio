@@ -5,93 +5,13 @@ import { Search, Calendar, Clock, ArrowRight } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { blogPosts } from '@/data/blogPosts';
 
 const Blog = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [currentPage, setCurrentPage] = useState(1);
   const postsPerPage = 6;
-
-  const blogPosts = [
-    {
-      id: 1,
-      title: "Building Modern Web Applications with React and TypeScript",
-      slug: "modern-web-apps-react-typescript",
-      excerpt: "Learn how to build scalable and maintainable web applications using React and TypeScript. Discover best practices and advanced patterns.",
-      content: "Full content here...",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
-      category: "Web Development",
-      author: "Kabiraj",
-      publishDate: "2024-01-15",
-      readTime: "8 min read",
-      tags: ["React", "TypeScript", "Web Development"]
-    },
-    {
-      id: 2,
-      title: "The Future of Mobile Development: React Native vs Flutter",
-      slug: "mobile-development-react-native-flutter",
-      excerpt: "Compare React Native and Flutter for cross-platform mobile development. Which one should you choose for your next project?",
-      content: "Full content here...",
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
-      category: "Mobile Development",
-      author: "Kabiraj",
-      publishDate: "2024-01-10",
-      readTime: "12 min read",
-      tags: ["React Native", "Flutter", "Mobile Development"]
-    },
-    {
-      id: 3,
-      title: "Designing User-Centered Interfaces: A Complete Guide",
-      slug: "user-centered-interface-design-guide",
-      excerpt: "Master the principles of user-centered design and create interfaces that users love. From research to prototyping.",
-      content: "Full content here...",
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
-      category: "UI/UX Design",
-      author: "Kabiraj",
-      publishDate: "2024-01-05",
-      readTime: "10 min read",
-      tags: ["UI/UX", "Design", "User Experience"]
-    },
-    {
-      id: 4,
-      title: "Scaling Node.js Applications: Performance Best Practices",
-      slug: "scaling-nodejs-performance-best-practices",
-      excerpt: "Learn how to optimize and scale your Node.js applications for high performance and reliability in production environments.",
-      content: "Full content here...",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475",
-      category: "Backend Development",
-      author: "Kabiraj",
-      publishDate: "2024-01-01",
-      readTime: "15 min read",
-      tags: ["Node.js", "Performance", "Backend"]
-    },
-    {
-      id: 5,
-      title: "Introduction to Cloud Computing with AWS",
-      slug: "cloud-computing-aws-introduction",
-      excerpt: "Get started with Amazon Web Services and learn the fundamentals of cloud computing for modern web applications.",
-      content: "Full content here...",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
-      category: "Cloud Computing",
-      author: "Kabiraj",
-      publishDate: "2023-12-28",
-      readTime: "11 min read",
-      tags: ["AWS", "Cloud Computing", "DevOps"]
-    },
-    {
-      id: 6,
-      title: "JavaScript ES2024: New Features and Updates",
-      slug: "javascript-es2024-new-features",
-      excerpt: "Explore the latest JavaScript features and improvements in ES2024. Stay up-to-date with the evolving language.",
-      content: "Full content here...",
-      image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7",
-      category: "Web Development",
-      author: "Kabiraj",
-      publishDate: "2023-12-25",
-      readTime: "7 min read",
-      tags: ["JavaScript", "ES2024", "Programming"]
-    }
-  ];
 
   const categories = ['All', ...Array.from(new Set(blogPosts.map(post => post.category)))];
 
